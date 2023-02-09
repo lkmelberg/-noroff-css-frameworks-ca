@@ -46,6 +46,7 @@ body {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
+  justify-content: center;
 }
 
 .friend {
@@ -10838,6 +10839,7 @@ h3,
 .h3 {
   text-align: center;
   text-decoration: none;
+  color: #000;
 }
 
 h2, .h2,
@@ -10873,10 +10875,8 @@ body {
 .new-post,
 .list-post,
 .friends {
-  background-color: #d4bfff;
   border-radius: 5px;
   margin: 3rem;
-  border: 1px solid rgba(0, 0, 0, 0.18);
   text-align: center;
 }
 
