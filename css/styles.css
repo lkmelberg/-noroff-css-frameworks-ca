@@ -29,6 +29,49 @@ body {
   border-top-right-radius: 0;
 }
 
+.social-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.social-list li {
+  padding: 10px;
+  color: #6118fb;
+  font-size: 2rem;
+}
+
+.post-friends {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.friend {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 20rem;
+  gap: 5px;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.friend-img {
+  height: 3rem;
+  border-radius: 5px;
+}
+
+.friend span {
+  flex-grow: 2;
+}
+
+@media (max-width: 992px) {
+  .post-friends {
+    flex-wrap: wrap;
+  }
+}
 /*!
  * Bootstrap  v5.2.0 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -10788,8 +10831,23 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3 {
+  text-align: center;
+  text-decoration: none;
+}
+
+h2, .h2,
+h3,
+.h3 {
+  font-size: 2em;
+}
+
 body {
-  min-height: 75rem;
+  min-height: 60rem;
   margin-top: 3rem;
 }
 
@@ -10800,6 +10858,35 @@ body {
 .navbar-brand img {
   width: 20%;
   margin-left: 20px;
+}
+
+.btn {
+  color: #d4bfff;
+  border-color: #d4bfff;
+  background-color: #000;
+}
+
+.btn-rounded {
+  margin: 5px;
+}
+
+.new-post,
+.list-post,
+.friends {
+  background-color: #d4bfff;
+  border-radius: 5px;
+  margin: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  text-align: center;
+}
+
+.card {
+  margin-top: 3rem;
+}
+
+.card-img-top {
+  overflow: hidden;
+  height: 15rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
