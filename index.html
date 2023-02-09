@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TravelShare - Login</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://kit.fontawesome.com/cf5488008f.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="bg-light d-flex flex-wrap justify-content-center py-5">
+        <Header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-black">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="images/logo/Vectorts_logo_light.png" alt=""></a>
+
+                </div>
+            </nav>
+        </Header>
+
+
+        <main class="text-center form-signin w-100 m-auto">
+            <h1>Welcome To</h1>
+            <form method="get" action="/profile.html" class="must-validate">
+                <img class="mb-5" src="images/logo/Vectorts_logo_dark.png" alt="" width="auto" height="60">
+                <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                <p class="mt-5 mb-3 text-muted">&copy;2023</p>
+            </form>
+
+        </main>
+
+        <footer id="footer"
+            class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-muted">© 2023 TravelShare Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#twitter"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
+        </footer>
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            function validateForm() {
+                const forms = document.querySelectorAll('.must-validate')
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+                    ()
+            }
+            validateForm();
+
+
+        </script>
+
+    </body>
+
+</html>

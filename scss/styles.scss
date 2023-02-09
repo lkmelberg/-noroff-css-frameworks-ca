@@ -1,0 +1,16 @@
+@import "variables"; /* /src/scss/_variables.scss */
+@import "signin";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  min-height: 75rem;
+  margin-top: 3rem;
+}
+
+.bg-dark {
+  background-color: $black;
+}
+.navbar-brand img {
+  width: 20%;
+  margin-left: 20px;
+}
