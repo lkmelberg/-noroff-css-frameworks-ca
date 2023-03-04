@@ -32,7 +32,7 @@ body {
 }
 
 .btn {
-  color: #d4bfff;
+  color: #fff;
   border-color: #6118fb;
   background-color: #000;
 }
@@ -58,4 +58,17 @@ body {
 .card-img-top {
   overflow: hidden;
   height: 15rem;
+  object-fit: cover;
+}
+
+/* filter  */
+
+.filterContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1rem;
 }

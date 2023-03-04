@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "../scss/styles.scss";
 body {
   display: flex;
   align-items: center;
