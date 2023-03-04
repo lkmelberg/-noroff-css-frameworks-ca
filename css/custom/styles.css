@@ -1,14 +1,14 @@
-@import "variables"; /* /src/scss/_variables.scss */
-@import "signin";
-@import "profile";
-@import "../node_modules/bootstrap/scss/bootstrap";
-
+/* colors 
+black: #000;
+purpleD: #6118fb;
+purpleL: #d4bfff;
+white: #fff; */
 h1,
 h2,
 h3 {
   text-align: center;
   text-decoration: none;
-  color: $black;
+  color: #000;
 }
 
 h2,
@@ -19,10 +19,12 @@ h3 {
 body {
   min-height: 60rem;
   margin-top: 3rem;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .bg-dark {
-  background-color: $black;
+  background-color: #000;
 }
 .navbar-brand img {
   width: 20%;
@@ -30,9 +32,9 @@ body {
 }
 
 .btn {
-  color: $purpleL;
-  border-color: $purpleL;
-  background-color: $black;
+  color: #d4bfff;
+  border-color: #6118fb;
+  background-color: #000;
 }
 
 .btn-rounded {
@@ -42,7 +44,7 @@ body {
 .new-post,
 .list-post,
 .friends {
-  //   background-color: $purpleL;
+  /* background-color: #6118fb; */
   border-radius: 5px;
   margin: 3rem;
 
