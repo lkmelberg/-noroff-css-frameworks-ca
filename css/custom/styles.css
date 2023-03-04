@@ -70,5 +70,13 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+
+.btnFilter {
+  border-radius: 5px;
+}
+
+.filterActive {
+  background-color: #6118fb;
 }
