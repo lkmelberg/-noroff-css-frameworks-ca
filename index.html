@@ -44,7 +44,7 @@
                         <input type="checkbox" value="remember-me"> Remember me
                     </label>
                 </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                <button class="w-100 btn btn-lg btnSign btn-primary" type="submit">Sign in</button>
                 <div>or</div>
                 <button class="w-100 btn btn-primary"><a href="register.html">Register account</a></button>
                 <p class="mt-5 mb-3 text-muted">&copy;2023</p>
@@ -75,27 +75,8 @@
                         </svg></a></li>
             </ul>
         </footer>
-        <script>
-            // Example starter JavaScript for disabling form submissions if there are invalid fields
-            function validateForm() {
-                const forms = document.querySelectorAll('.must-validate')
-                Array.from(forms).forEach(form => {
-                    form.addEventListener('submit', event => {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
-
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-                    ()
-            }
-            validateForm();
-
-
-        </script>
-
+        <script src="js/script.js"></script>
+        <script src="js/user.js"></script>
     </body>
 
 </html>
