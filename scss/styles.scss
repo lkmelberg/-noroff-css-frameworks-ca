@@ -1,0 +1,59 @@
+@import "variables"; /* /src/scss/_variables.scss */
+@import "signin";
+@import "profile";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  text-decoration: none;
+  color: $black;
+}
+
+h2,
+h3 {
+  font-size: 2em;
+}
+
+body {
+  min-height: 60rem;
+  margin-top: 3rem;
+}
+
+.bg-dark {
+  background-color: $black;
+}
+.navbar-brand img {
+  width: 20%;
+  margin-left: 20px;
+}
+
+.btn {
+  color: $purpleL;
+  border-color: $purpleL;
+  background-color: $black;
+}
+
+.btn-rounded {
+  margin: 5px;
+}
+
+.new-post,
+.list-post,
+.friends {
+  //   background-color: $purpleL;
+  border-radius: 5px;
+  margin: 3rem;
+
+  text-align: center;
+}
+
+.card {
+  margin-top: 3rem;
+}
+
+.card-img-top {
+  overflow: hidden;
+  height: 15rem;
+}
