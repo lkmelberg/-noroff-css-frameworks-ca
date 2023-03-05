@@ -1,5 +1,3 @@
-// Reusable scripts and modules will be found here
-
 // Sign out
 const signoutBtn = document.querySelector(".signout");
 

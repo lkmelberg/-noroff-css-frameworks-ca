@@ -1,28 +1,12 @@
-// register, sign in js will be found here
-
-// sign out is under script.js
-
-//api.noroff.dev/api/v1.
-
-// testuser:
-// lin12345
-// lin12345@noroff.no
-// lin12345
-
-// import basicValidate \
+import { registerURL } from "./modules/urls";
 
 const btnReg = document.querySelector(".btnReg");
-const btnSign = document.querySelector(".btnSign");
 
 const displayMSG = document.querySelector(".displayMSG");
 const regForm = document.querySelector(".regForm");
 const nameReg = document.querySelector("#nameReg");
 const emailReg = document.querySelector("#emailReg");
 const passReg = document.querySelector("#passReg");
-
-// register user
-const API_BASE_URL = "https://nf-api.onrender.com";
-const registerURL = `${API_BASE_URL}/api/v1/social/auth/register`;
 
 function register(e) {
   // dont move from page
@@ -51,14 +35,13 @@ function register(e) {
       console.log(response);
       const responseAfter = await response;
       if (
-        responseAfter &&
+        responseAfter.ok &&
         responseAfter.status >= 200 &&
         responseAfter.status <= 299
       ) {
         displayMSG.innerHTML = `<div class="registerSuccess">Your account has been created, please return to sign in page</div>`;
         regForm.reset();
-      }
-      if (responseAfter.ok === false) {
+      } else {
         displayMSG.innerHTML = `<div class="registerError"><div class="registerErrorTop">Your registration failed, try again.</div><div>Make sure your email address ends with @noroff.no and your password is at least 8 characters</div></div>`;
         regForm.reset();
       }
@@ -79,45 +62,3 @@ function register(e) {
 }
 
 regForm.addEventListener("submit", register);
-
-// function checkLength(value, len) {
-//   if (value.trim().length >= len) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-
-// function validateEmail(email) {
-//   const regEx = /^[a-zA-Z0-9._%+-]+@(noroff)\.no$/;
-//   const patternMatches = regEx.test(email);
-//   return patternMatches;
-// }
-
-// console.log(linnTestUser);
-// console.log(linnTestUser2);
-// console.log(linnTestUser3);
-// btnReg.addEventListener("click", registerUser(registerURL, linnTestUser));
-// registerUser(registerURL, linnTestUser);
-
-// sign in
-
-// Example starter JavaScript for disabling form submissions if there are invalid fields - bootstrap
-// function validateForm() {
-//   const forms = document.querySelectorAll(".must-validate");
-//   Array.from(forms).forEach((form) => {
-//     form.addEventListener(
-//       "submit",
-//       (event) => {
-//         if (!form.checkValidity()) {
-//           event.preventDefault();
-//           event.stopPropagation();
-//         }
-
-//         form.classList.add("was-validated");
-//       },
-//       false
-//     );
-//   })();
-// }
-// validateForm();

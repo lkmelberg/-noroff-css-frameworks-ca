@@ -34,8 +34,12 @@ body {
 .bg-dark {
   background-color: #000;
 }
+.navbar-brand {
+  max-width: 6rem;
+}
+
 .navbar-brand img {
-  width: 20%;
+  width: 80%;
   margin-left: 20px;
 }
 
@@ -90,9 +94,9 @@ body {
 }
 
 .registerSuccess,
-.loginSuccess,
 .registerError,
-.loginError {
+.signinError,
+.signinSuccess {
   padding: 1rem;
   color: white;
   border-radius: 1rem;
@@ -100,14 +104,15 @@ body {
 }
 
 .registerSuccess,
-.loginSuccess {
+.signinSuccess {
   background: green;
 }
 
 .registerError,
-.loginError {
+.signinError {
   background: red;
 }
-.registerErrorTop {
+.registerErrorTop,
+.signinErrorTop {
   font-weight: 600;
 }
