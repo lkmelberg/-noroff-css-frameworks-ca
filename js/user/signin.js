@@ -1,21 +1,9 @@
 // Sign in
-import { signinURL } from "./urls.js";
-
-const btnReg = document.querySelector(".btnReg");
-const btnSign = document.querySelector(".btnSign");
-
+import { signinURL } from "../modules/urls.js";
 const displayMSG = document.querySelector(".displayMSG");
-const regForm = document.querySelector(".regForm");
-const nameReg = document.querySelector("#nameReg");
-const emailReg = document.querySelector("#emailReg");
-const passReg = document.querySelector("#passReg");
-
-const signForm = document.querySelector(".signForm");
-
 const emailSign = document.querySelector("#emailSign");
 const passSign = document.querySelector("#passSign");
-
-// register
+const signForm = document.querySelector(".signForm");
 
 export function signin(e) {
   // dont move from page
@@ -48,10 +36,7 @@ export function signin(e) {
       if (accessToken !== undefined && response.ok) {
         window.location.href = `home.html`;
         displayMSG.innerHTML = `<div class="signinSuccess"><div class="">Sign In Successful - Redirecting</div><div>Try again or register an account</div></div>`;
-      }
-      if (accessToken === undefined) {
-        displayMSG.innerHTML = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
-      } else {
+      } else if (accessToken === undefined) {
         displayMSG.innerHTML = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
       }
       return json;

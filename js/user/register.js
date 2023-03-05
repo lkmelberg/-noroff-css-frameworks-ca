@@ -1,6 +1,5 @@
-import { registerURL } from "./modules/urls";
-
-const btnReg = document.querySelector(".btnReg");
+const API_BASE_URL = "https://nf-api.onrender.com";
+const registerURL = `${API_BASE_URL}/api/v1/social/auth/register`;
 
 const displayMSG = document.querySelector(".displayMSG");
 const regForm = document.querySelector(".regForm");
