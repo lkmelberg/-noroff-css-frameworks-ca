@@ -25,28 +25,30 @@
 
 
         <main class="text-center form-signin w-100 m-auto">
+            <div class="displayMSG"></div>
             <h1>Welcome To</h1>
-            <form method="get" action="/profile.html" class="must-validate">
+
+            <form action="/index.html" class="must-validate regForm">
                 <img class="mb-5" src="images/logo/Vectorts_logo_dark.png" alt="" width="auto" height="60">
-                <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+                <h1 class="h3 mb-3 fw-normal">Sign in to Account</h1>
 
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
+                    <input type="name" class="form-control nameReg" id="nameReg" placeholder="Jane Smith">
+                    <label for="nameReg">Name</label>
                 </div>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
+                    <input type="email" class="form-control emailReg" id="emailReg" placeholder="name@example.com">
+                    <label for="emailReg">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control passReg" id="passReg" placeholder="Password">
+                    <label for="passReg">Password</label>
                 </div>
 
-                <div class="checkbox mb-3">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
-                </div>
-                <button class="w-100 btn btn-lg btnSign btn-primary" type="submit">Sign in</button>
+
+                <button class="w-100 btn btn-lg btn-primary btnReg" type="submit">Register</button>
                 <div>or</div>
-                <button class="w-100 btn btn-primary"><a href="register.html">Register account</a></button>
+                <div class="w-100 btn btn-primary"><a href="index.html">Back to sign in</a></div>
                 <p class="mt-5 mb-3 text-muted">&copy;2023</p>
             </form>
 

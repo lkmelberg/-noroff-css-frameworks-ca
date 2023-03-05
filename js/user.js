@@ -14,6 +14,7 @@
 const btnReg = document.querySelector(".btnReg");
 const btnSign = document.querySelector(".btnSign");
 
+const displayMSG = document.querySelector(".displayMSG");
 const regForm = document.querySelector(".regForm");
 const nameReg = document.querySelector("#nameReg");
 const emailReg = document.querySelector("#emailReg");
@@ -35,7 +36,6 @@ function register(e) {
   };
 
   // if there is a name, noroff adress and 8 character password - create account
-  //   if (basicValidate) {
   // registerUser function
   async function registerUser(url, data) {
     try {
@@ -49,6 +49,24 @@ function register(e) {
 
       const response = await fetch(url, postData);
       console.log(response);
+      const responseAfter = await response;
+      if (
+        responseAfter &&
+        responseAfter.status >= 200 &&
+        responseAfter.status <= 299
+      ) {
+        displayMSG.innerHTML = `<div class="registerSuccess">Your account has been created, please return to sign in page</div>`;
+        regForm.reset();
+      }
+      if (responseAfter.ok === false) {
+        displayMSG.innerHTML = `<div class="registerError"><div class="registerErrorTop">Your registration failed, try again.</div><div>Make sure your email address ends with @noroff.no and your password is at least 8 characters</div></div>`;
+        regForm.reset();
+      }
+      // if (responseAfter.ok === false && responseAfter.status === 404) {
+      //   displayMSG.innerHTML = `<div class="registerSuccess">Your account has been deleted</div>`;
+      //   regForm.reset();
+      // }
+
       const json = await response.json();
       console.log(json);
       return json;
@@ -56,6 +74,7 @@ function register(e) {
       console.log(error);
     }
   }
+  console.log(userReg);
   registerUser(registerURL, userReg);
 }
 
@@ -73,18 +92,6 @@ regForm.addEventListener("submit", register);
 //   const regEx = /^[a-zA-Z0-9._%+-]+@(noroff)\.no$/;
 //   const patternMatches = regEx.test(email);
 //   return patternMatches;
-// }
-
-// function basicValidate() {
-//   if (
-//     checkLength(nameReg.value, 1) &&
-//     validateEmail(emailReg.value) &&
-//     checkLength(passReg.value, 8)
-//   ) {
-//     return true;
-//   } else {
-//     console.log("Does not pass basic validation");
-//   }
 // }
 
 // console.log(linnTestUser);

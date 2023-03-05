@@ -88,3 +88,26 @@ body {
 .filterActive {
   background-color: #6118fb;
 }
+
+.registerSuccess,
+.loginSuccess,
+.registerError,
+.loginError {
+  padding: 1rem;
+  color: white;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.registerSuccess,
+.loginSuccess {
+  background: green;
+}
+
+.registerError,
+.loginError {
+  background: red;
+}
+.registerErrorTop {
+  font-weight: 600;
+}
