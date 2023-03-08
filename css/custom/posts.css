@@ -1,0 +1,64 @@
+.new-post,
+.list-post,
+.friends {
+  /* background-color: #6118fb; */
+  border-radius: 5px;
+  margin: 3rem;
+
+  text-align: center;
+}
+
+.card {
+  margin-top: 3rem;
+  width: 40rem;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* filter  */
+
+.filterContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 0.1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.btnFilter {
+  border-radius: 5px;
+}
+
+.filterActive {
+  background-color: #6118fb;
+}
+
+/* Create or update post  */
+
+.addContent {
+  display: flex;
+  margin-right: 0.5rem;
+  align-items: flex-end;
+}
+
+.postBtn:disabled,
+.updateBtn:disabled {
+  color: #fff;
+  background-color: #d4bfff;
+  border-color: #d4bfff;
+}
+
+.textCreate {
+  height: 8rem;
+}
+
+.topCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
