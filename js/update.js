@@ -18,6 +18,7 @@ const updateAndDeleteURL = `${API_BASE_URL}/api/v1/social/posts/${id}`;
 
 const token = localStorage.getItem("accessToken");
 
+const updateContainer = document.querySelector(".updateContainer");
 const displayMSG = document.querySelector(".displayMSG");
 const updateForm = document.querySelector(".updateForm");
 const postForm = document.querySelector(".postForm");
@@ -48,10 +49,11 @@ async function fetchPostInfo(url) {
     const response = await fetch(url, getData);
     console.log(response);
     if (response.status >= 400 && response.status <= 499) {
-      addPostId.innerHTML = `Post Not Found -> sending you back to home page `;
+      updateContainer.innerHTML = `  <h1 class="addPostId">Post Not Found</h1>
+    <p>Redirecting you back to the home page, please wait</p>`;
       setTimeout(function () {
         window.location.href = `home.html`;
-      }, 4000);
+      }, 5000);
     } else {
       const json = await response.json();
       console.log(json);
@@ -136,10 +138,11 @@ function deletePost(e) {
       console.log(response);
       const json = await response.json();
       console.log(json);
-      displayMSG.innerHTML = `<div class="postSuccess">Post deleted!</div>`;
+      displayMSG.innerHTML = `<div class="postSuccess">Post deleted! Redirecting you home</div>`;
       updateForm.reset();
       setTimeout(function () {
         window.location.href = `home.html`;
+        location.reload();
       }, 5000);
       return json;
     } catch (error) {
