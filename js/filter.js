@@ -36,10 +36,6 @@ function fetchFiltered(e) {
 
       postsContainer.innerHTML = "";
 
-      // filtered Array
-      //   const searchedPost = postArray.filter(
-      //     (post) => post.title.value === searchInput.value
-      //   );
       const searchedPost = json.filter((post) => {
         if (
           post.title.toLowerCase().includes(searchInput.value.toLowerCase()) ||
@@ -53,16 +49,6 @@ function fetchFiltered(e) {
         }
       });
 
-      //   function filterPosts(array, string) {
-      //     return array.filter((post) =>
-      //       post.title.some((k) =>
-      //         String(o[k]).toLowerCase().includes(string.toLowerCase())
-      //       )
-      //     );
-      //   }
-
-      //   const searchedPost = filterPosts(postArray, searchInput.value);
-
       console.log(searchedPost);
 
       searchedPost.forEach(function (post) {
@@ -70,6 +56,7 @@ function fetchFiltered(e) {
         const postDate = post.created.substring(0, 10);
         const postTime = post.created.substring(11, 16);
         const postAuthor = author.name;
+        // MIGHT ADD TAGS LATER
         //   const postTags = post.tags;
         //   <p class="card-text">Tags:${postTags}</p>;
 
@@ -88,7 +75,7 @@ function fetchFiltered(e) {
          </a>`;
 
         if (author.name === userName) {
-          postsContainer.innerHTML += `<a href="update.html?id=${id}"><div class="card mb-3">
+          postsContainer.innerHTML += `<a href="update.html?id=${id}"><div class="card mb-3 searchCard">
                   <div class="card-body">
                   <div class="topCard">
                       <h4 class="card-title">${title}</h4>
