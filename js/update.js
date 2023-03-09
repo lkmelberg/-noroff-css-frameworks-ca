@@ -14,7 +14,7 @@ const API_BASE_URL = "https://nf-api.onrender.com";
 
 // Update entry & Delete entry
 // PUT /api/v1/social/posts/<id>
-const updateAndDeleteURL = `${API_BASE_URL}/api/v1/social/posts/${id}`;
+const updateAndDeleteURL = `${API_BASE_URL}/api/v1/social/posts/${id}?_author=true`;
 
 const token = localStorage.getItem("accessToken");
 
@@ -26,7 +26,9 @@ const deleteBtn = document.querySelector(".deleteBtn");
 const updateBtn = document.querySelector(".updateBtn");
 const titleCreate = document.querySelector("#title");
 const textCreate = document.querySelector(".textCreate");
-
+const userName = localStorage.getItem("userName");
+const btns = document.querySelector(".btns");
+const pageh1 = document.querySelector(".pageh1");
 function success() {
   if (textCreate.value === "" || titleCreate.value === "") {
     updateBtn.disabled = true;
@@ -58,11 +60,30 @@ async function fetchPostInfo(url) {
       const json = await response.json();
       console.log(json);
 
-      const { id, title, body } = json;
+      const { id, title, body, author } = json;
+      const date = json.created.substring(0, 10);
+      const time = json.created.substring(11, 16);
       titleCreate.value = `${title}`;
       textCreate.value = `${body}`;
       currentID.innerHTML = `${title}`;
-      addPostId.innerHTML += `: ${id}`;
+      addPostId.innerHTML += `${id}`;
+      if (author.name !== userName) {
+        btns.innerHTML = ``;
+        updateContainer.innerHTML = ``;
+        updateContainer.innerHTML = ` 
+           <h1 class="addPostId">Post: ${id}</h1> <div class="card mb-3">
+      
+                <div class="card-body">
+               
+                    <h4 class="card-title">${title}</h4>
+                     <div class="updateEdit"> </div>
+                    <p class="card-text">${body}</p>
+                    <p class="card-text"><small class="text-muted created">Created: ${date} at ${time} by <b>${author.name}</b></small></p>
+                
+                </div>
+            </div>
+        `;
+      }
     }
   } catch (error) {
     console.log(error);
@@ -142,7 +163,6 @@ function deletePost(e) {
       updateForm.reset();
       setTimeout(function () {
         window.location.href = `home.html`;
-        location.reload();
       }, 5000);
       return json;
     } catch (error) {

@@ -30,7 +30,9 @@ export function signin(e) {
       console.log(response);
       const json = await response.json();
       const accessToken = json.accessToken;
+      const userName = json.name;
       localStorage.setItem("accessToken", accessToken);
+      localStorage.setItem("userName", userName);
       console.log(json);
       console.log(accessToken);
       if (accessToken !== undefined && response.ok) {
