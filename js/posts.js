@@ -33,6 +33,7 @@ async function fetchPosts(url) {
 
     postsContainer.innerHTML = "";
 
+    //   all post
     postArray.forEach(function (post) {
       const { id, title, body, author } = post;
       const postDate = post.created.substring(0, 10);
@@ -81,6 +82,8 @@ async function fetchPosts(url) {
 }
 
 fetchPosts(createAndGetURL);
+
+// get searched posts
 
 // create post
 const postBtn = document.querySelector(".postBtn");
