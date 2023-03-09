@@ -42,7 +42,12 @@ function fetchFiltered(e) {
       //   );
       const searchedPost = json.filter((post) => {
         if (
-          post.title.toLowerCase().includes(searchInput.value.toLowerCase())
+          post.title.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+          post.body.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+          post.author.name
+            .toLowerCase()
+            .includes(searchInput.value.toLowerCase()) ||
+          post.id === parseInt(searchInput.value)
         ) {
           return true;
         }
