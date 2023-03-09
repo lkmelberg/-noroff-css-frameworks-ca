@@ -1,9 +1,8 @@
 const currentID = document.querySelector(".currentID");
 const addPostId = document.querySelector(".addPostId");
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id");
-
+export const queryString = document.location.search;
+export const params = new URLSearchParams(queryString);
+export const id = params.get("id");
 // if (id === null) {
 //   location.href = "/";
 // }

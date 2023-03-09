@@ -1,5 +1,5 @@
 // Sign in
-import { signinURL } from "../modules/urls.js";
+import { signinURL } from "../modules/urls.mjs";
 const displayMSG = document.querySelector(".displayMSG");
 const emailSign = document.querySelector("#emailSign");
 const passSign = document.querySelector("#passSign");
