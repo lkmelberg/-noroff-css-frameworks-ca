@@ -4,7 +4,7 @@ import {
   textCreate,
   displayMSG,
   postForm,
-} from "../variables/variables.mjs";
+} from "../../variables/variables.mjs";
 
 export function createPost(e) {
   // dont move from page

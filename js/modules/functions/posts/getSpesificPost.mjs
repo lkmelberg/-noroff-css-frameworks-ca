@@ -2,6 +2,7 @@ import {
   updateContainer,
   token,
   userName,
+  loader,
   titleCreate,
   textCreate,
   currentID,
@@ -55,6 +56,7 @@ export async function fetchPostInfo(url) {
         `;
       }
     }
+    loader.innerHTML = "";
   } catch (error) {
     console.log(error);
   }

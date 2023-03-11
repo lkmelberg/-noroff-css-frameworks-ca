@@ -3,7 +3,7 @@ import {
   titleCreate,
   postBtn,
   addContent,
-} from "../variables/variables.mjs";
+} from "../../variables/variables.mjs";
 
 export function success() {
   if (textCreate.value === "" || titleCreate.value === "") {

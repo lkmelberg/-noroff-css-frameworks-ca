@@ -1,10 +1,10 @@
-import { createAndGetURL } from "../variables/variables.mjs";
+import { createAndGetURL } from "../../variables/variables.mjs";
 import {
   postsContainer,
   loader,
   token,
   userName,
-} from "../variables/variables.mjs";
+} from "../../variables/variables.mjs";
 
 export async function fetchPosts(url) {
   try {
