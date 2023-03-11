@@ -38,7 +38,7 @@ export async function fetchPosts(url) {
                 <div class="topCard">
                     <h4 class="card-title">${title}</h4>
                     <div class="updateEdit">
-                   <h5>Edit or Delete Post</h5>
+<i class="fa-solid fa-pen-to-square"></i>
                      </div>
                     
                     </div>
@@ -58,7 +58,7 @@ export async function fetchPosts(url) {
                     <h4 class="card-title">${title}</h4>
                      <div class="updateEdit"> </div>
                     <p class="card-text">${body}</p>
-                    <p class="card-text"><small class="text-muted created">Created: ${postDate} at ${postTime} by <b>${postAuthor}</b> - post: ${id}</small></p>
+                    <p class="card-text"><small class="text-muted created">Created: ${postDate} at ${postTime} by <b>${postAuthor}</b></small></p>
                 
                 </div>
             </div>

@@ -54,7 +54,25 @@ export function fetchFiltered(e) {
         //   const postTags = post.tags;
         //   <p class="card-text">Tags:${postTags}</p>;
 
-        postsContainer.innerHTML += `
+        if (author.name === userName) {
+          postsContainer.innerHTML += `<a href="update.html?id=${id}"><div class="card mb-3 searchCard">
+                  <div class="card-body">
+                  <div class="topCard">
+                      <h4 class="card-title">${title}</h4>
+                      <div class="updateEdit">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                       </div>
+
+                      </div>
+                      <p class="card-text">${body}</p>
+                      <p class="card-text"><small class="text-muted created">Created: ${postDate} at ${postTime} by <b>${postAuthor}</b></small></p>
+
+                  </div>
+              </div>
+              </a>`;
+        }
+        if (author.name !== userName) {
+          postsContainer.innerHTML += `
            <a href="update.html?id=${id}">
            <div class="card mb-3">
                   <div class="card-body">
@@ -67,23 +85,6 @@ export function fetchFiltered(e) {
                   </div>
               </div>
          </a>`;
-
-        if (author.name === userName) {
-          postsContainer.innerHTML += `<a href="update.html?id=${id}"><div class="card mb-3 searchCard">
-                  <div class="card-body">
-                  <div class="topCard">
-                      <h4 class="card-title">${title}</h4>
-                      <div class="updateEdit">
-                      <a href="update.html?id=${id}" class="updateLink"><h5>Edit or Delete Post</h5></a>
-                       </div>
-
-                      </div>
-                      <p class="card-text">${body}</p>
-                      <p class="card-text"><small class="text-muted created">Created: ${postDate} at ${postTime} by <b>${postAuthor}</b></small></p>
-
-                  </div>
-              </div>
-              </a>`;
         }
       });
 

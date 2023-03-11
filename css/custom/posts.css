@@ -9,7 +9,7 @@
 }
 
 .card {
-  margin-top: 3rem;
+  margin-top: 1rem;
   width: 40rem;
 }
 
@@ -39,6 +39,12 @@
 }
 
 /* Create or update post  */
+
+.newPostCont {
+  background-color: #e6e2ef;
+  border: #bab0cf solid 1px;
+  padding: 2rem;
+}
 
 .addContent {
   display: flex;
