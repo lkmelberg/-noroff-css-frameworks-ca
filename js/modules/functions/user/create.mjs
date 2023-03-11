@@ -8,11 +8,10 @@ import {
 } from "../../variables/variables.mjs";
 
 /**
-
-    Creates a unique user if inputs are valid and stores it in the noroff API.
-    @param {Event} e - The event object triggered by the button click.
-    @returns {Promise} A Promise that resolves with the JSON response from the server if the account was created successfully. Otherwise, it rejects with an error message.
-    */
+ * Creates a unique user if inputs are valid and stores it in the noroff API.
+ *  @param {Event} e - The event object triggered by the button click.
+ *  @returns {Promise} A Promise that resolves with the JSON response from the server if the account was created successfully. Otherwise, it rejects with an error message.
+ */
 
 export function register(e) {
   // dont move from page
@@ -27,6 +26,14 @@ export function register(e) {
 
   // if there is a name, noroff adress and 8 character password - create account
   // registerUser function
+
+  /**
+   * Sends a POST request to the specified URL with the provided data.
+   * @param {string} url - The URL to send the request to.
+   * @param {object} data - The data to include in the request body.
+   * @returns {Promise} A Promise that resolves with the JSON response from the server if the request was successful
+   * Otherwise, it rejects with an error message.
+   */
   async function registerUser(url, data) {
     try {
       const postData = {

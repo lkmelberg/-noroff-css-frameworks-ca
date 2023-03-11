@@ -6,12 +6,11 @@ import {
   userName,
 } from "../../variables/variables.mjs";
 
-/*** 
- Sends a GET request to the specified URL and gets only posts made by the logged in user.
-    @param {string} url - The URL to send the request to.
-    @returns {Promise} A Promise that resolves with the JSON response from the server if the request was successful. Otherwise, it rejects with an error message.
-    */
-
+/**
+ * Sends a GET request to the specified URL and gets only posts made by the logged in user.
+ *  @param {string} url - The URL to send the request to.
+ *  @returns {Promise} A Promise that resolves with the JSON response from the server if the request was successful. Otherwise, it rejects with an error message.
+ */
 export async function fetchMyposts(url) {
   try {
     const getData = {

@@ -10,15 +10,14 @@ import {
   btns,
 } from "../../variables/variables.mjs";
 
-// gets ons post and lets you modify it if you are the author
-
-// different UI depending on oif you are allowed to edit or not
-
 /**
-    Sends a GET request to the specified URL.
-    @param {string} url - The URL to send the request to.
-    @returns {Promise} A Promise that resolves with the JSON response from the server if the request was successful. Otherwise, it rejects with an error message.
-    */
+ *  gets ons post and lets you modify it if you are the author
+ *  different UI depending on oif you are allowed to edit or not
+ *  Sends a GET request to the specified URL.
+ *  @param {string} url - The URL to send the request to.
+ *  @returns {Promise} A Promise that resolves with the JSON response from the server if the request was successful
+ * Otherwise, it rejects with an error message.
+ */
 
 export async function fetchPostInfo(url) {
   try {

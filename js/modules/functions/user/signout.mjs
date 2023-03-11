@@ -1,8 +1,8 @@
 // Sign out
 
 /**
-Signs out user, removed token and username from localstorage
-    */
+ * Signs out user, removes token and username from localstorage
+ */
 
 export function signOut() {
   localStorage.removeItem("accessToken");

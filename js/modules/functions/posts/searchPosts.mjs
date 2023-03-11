@@ -8,10 +8,10 @@ import {
 } from "../../variables/variables.mjs";
 
 /**
-    Fetches and displays an ayyar of posts based on search input
-    @param {Event} e - The event object triggered by the button click.
-    @returns {Promise} A Promise that resolves with the JSON response from the server if the posts were fetched successfully. Otherwise, it rejects with an error message.
-    */
+ *  Fetches and displays an array of posts based on search input
+ *  @param {Event} e - The event object triggered by the button click.
+ *  @returns {Promise} A Promise that resolves with the JSON response from the server if the posts were fetched successfully. Otherwise, it rejects with an error message.
+ */
 export function fetchFiltered(e) {
   // dont move from page
   e.preventDefault();
