@@ -19,7 +19,6 @@ export function deletePost(e) {
   e.preventDefault();
 
   /**
-
     Sends a DELETE request to the specified URL.
     @param {string} url - The URL to send the request to.
     @returns {Promise} A Promise that resolves with the JSON response from the server if the request was successful. Otherwise, it rejects with an error message.

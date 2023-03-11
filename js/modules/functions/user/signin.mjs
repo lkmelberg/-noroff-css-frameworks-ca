@@ -5,6 +5,13 @@ import {
   passSign,
 } from "../../variables/variables.mjs";
 
+/**
+
+    Signs in a user if inputs are valid and the user is registered it in the noroff API.
+    @param {Event} e - The event object triggered by the button click.
+    @returns {Promise} A Promise that resolves with the JSON response from the server if the account was logged in successfully. Otherwise, it rejects with an error message.
+    */
+
 export function signin(e) {
   // dont move from page
   e.preventDefault();
@@ -15,8 +22,6 @@ export function signin(e) {
     password: passSign.value,
   };
 
-  // if there is a name, noroff adress and 8 character password - create account
-  // registerUser function
   async function signinUser(url, data) {
     try {
       const postData = {

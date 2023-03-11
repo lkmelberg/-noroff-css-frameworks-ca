@@ -7,6 +7,13 @@ import {
   textCreate,
 } from "../../variables/variables.mjs";
 
+/**
+
+    Updates the post with the specified ID.
+    @param {Event} e - The event object triggered by the button click.
+    @returns {Promise} A Promise that resolves with the JSON response from the server if the post was updated successfully. Otherwise, it rejects with an error message.
+    */
+
 export function updatePost(e) {
   // dont move from page
   e.preventDefault();

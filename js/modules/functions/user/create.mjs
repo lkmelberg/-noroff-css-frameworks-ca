@@ -7,6 +7,13 @@ import {
   passReg,
 } from "../../variables/variables.mjs";
 
+/**
+
+    Creates a unique user if inputs are valid and stores it in the noroff API.
+    @param {Event} e - The event object triggered by the button click.
+    @returns {Promise} A Promise that resolves with the JSON response from the server if the account was created successfully. Otherwise, it rejects with an error message.
+    */
+
 export function register(e) {
   // dont move from page
   e.preventDefault();
