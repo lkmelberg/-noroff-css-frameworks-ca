@@ -1,6 +1,13 @@
 // API
 export const API_BASE_URL = "https://nf-api.onrender.com";
 
+// register endpoint
+export const registerURL = `${API_BASE_URL}/api/v1/social/auth/register`;
+
+// login endpoint
+export const signinURL = `${API_BASE_URL}/api/v1/social/auth/login`;
+// authenticate endpoint
+
 // create and get
 export const createAndGetURL = `${API_BASE_URL}/api/v1/social/posts?_author=true`;
 
@@ -11,7 +18,6 @@ export const id = params.get("id");
 export const updateAndDeleteURL = `${API_BASE_URL}/api/v1/social/posts/${id}?_author=true`;
 
 // common
-
 export const token = localStorage.getItem("accessToken");
 export const userName = localStorage.getItem("userName");
 export const displayMSG = document.querySelector(".displayMSG");

@@ -1,12 +1,11 @@
-import { createAndGetURL } from "../variables/variables.mjs";
-
 import {
   postsContainer,
   loader,
   token,
   userName,
   searchInput,
-} from "../variables/variables.mjs";
+  createAndGetURL,
+} from "../../variables/variables.mjs";
 
 export function fetchFiltered(e) {
   // dont move from page
@@ -60,10 +59,10 @@ export function fetchFiltered(e) {
            <div class="card mb-3">
                   <div class="card-body">
 
-                      <h4 class="card-title">${title} id ${id}</h4>
+                      <h4 class="card-title">${title}</h4>
                        <div class="updateEdit"> </div>
                       <p class="card-text">${body}</p>
-                      <p class="card-text"><small class="text-muted created">Created: ${postDate} at ${postTime} by <b>${postAuthor}</b></small></p>
+                      <p class="card-text"><small class="text-muted created">Created: ${postDate} at ${postTime} by <b>${postAuthor}</b> - post: ${id}</small></p>
 
                   </div>
               </div>

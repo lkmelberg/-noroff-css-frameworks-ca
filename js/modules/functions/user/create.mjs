@@ -1,13 +1,13 @@
-const API_BASE_URL = "https://nf-api.onrender.com";
-const registerURL = `${API_BASE_URL}/api/v1/social/auth/register`;
+import {
+  registerURL,
+  displayMSG,
+  regForm,
+  nameReg,
+  emailReg,
+  passReg,
+} from "../../variables/variables.mjs";
 
-const displayMSG = document.querySelector(".displayMSG");
-const regForm = document.querySelector(".regForm");
-const nameReg = document.querySelector("#nameReg");
-const emailReg = document.querySelector("#emailReg");
-const passReg = document.querySelector("#passReg");
-
-function register(e) {
+export function register(e) {
   // dont move from page
   e.preventDefault();
 
@@ -38,10 +38,13 @@ function register(e) {
         responseAfter.status >= 200 &&
         responseAfter.status <= 299
       ) {
-        displayMSG.innerHTML = `<div class="registerSuccess">Your account has been created, please return to sign in page</div>`;
+        displayMSG.innerHTML = `<div class="registerSuccess">Your account has been created, redirecting...</div>`;
         regForm.reset();
+        setTimeout(function () {
+          window.location.href = `index.html`;
+        }, 2500);
       } else {
-        displayMSG.innerHTML = `<div class="registerError"><div class="registerErrorTop">Your registration failed, try again.</div><div>Make sure your email address ends with @noroff.no and your password is at least 8 characters</div></div>`;
+        displayMSG.innerHTML = `<div class="registerError"><div class="registerErrorTop">Your registration failed, try again.</div><p>Make sure your email address ends with @noroff.no and your password is at least 8 characters<p></div>`;
         regForm.reset();
       }
       // if (responseAfter.ok === false && responseAfter.status === 404) {
@@ -60,4 +63,4 @@ function register(e) {
   registerUser(registerURL, userReg);
 }
 
-regForm.addEventListener("submit", register);
+// regForm.addEventListener("submit", register);

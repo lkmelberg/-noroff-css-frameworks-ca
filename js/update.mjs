@@ -13,7 +13,7 @@ import {
 // functions
 import { success } from "./modules/functions/posts/disableForm.mjs";
 import { fetchPostInfo } from "./modules/functions/posts/getSpesificPost.mjs";
-import { updatePost } from "./modules/functions/posts/editPost.mjs";
+import { updatePost } from "./modules/functions/posts/updatePost.mjs";
 import { deletePost } from "./modules/functions/posts/deletePost.mjs";
 import { signOut } from "./modules/functions/user/signout.mjs";
 

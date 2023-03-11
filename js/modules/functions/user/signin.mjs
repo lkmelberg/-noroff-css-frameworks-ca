@@ -1,9 +1,9 @@
-// Sign in
-import { signinURL } from "../modules/urls.mjs";
-const displayMSG = document.querySelector(".displayMSG");
-const emailSign = document.querySelector("#emailSign");
-const passSign = document.querySelector("#passSign");
-const signForm = document.querySelector(".signForm");
+import {
+  signinURL,
+  displayMSG,
+  emailSign,
+  passSign,
+} from "../../variables/variables.mjs";
 
 export function signin(e) {
   // dont move from page
@@ -36,8 +36,10 @@ export function signin(e) {
       console.log(json);
       console.log(accessToken);
       if (accessToken !== undefined && response.ok) {
-        window.location.href = `home.html`;
-        displayMSG.innerHTML = `<div class="signinSuccess"><div class="">Sign In Successful - Redirecting</div><div>Try again or register an account</div></div>`;
+        displayMSG.innerHTML = `<div class="signinSuccess">Sign In Successful - Redirecting</div>`;
+        setTimeout(function () {
+          window.location.href = `home.html`;
+        }, 2500);
       } else if (accessToken === undefined) {
         displayMSG.innerHTML = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
       }
@@ -50,4 +52,4 @@ export function signin(e) {
   signinUser(signinURL, userSign);
 }
 
-signForm.addEventListener("submit", signin);
+// signForm.addEventListener("submit", signin);

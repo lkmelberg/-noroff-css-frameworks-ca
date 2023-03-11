@@ -4061,7 +4061,7 @@ fieldset:disabled .btn {
     overflow-y: visible;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 300px) {
   .navbar-expand-md {
     flex-wrap: nowrap;
     justify-content: flex-start;

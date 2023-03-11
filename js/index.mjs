@@ -1,3 +1,6 @@
-functions;
+import { signForm } from "./modules/variables/variables.mjs";
+import { signin } from "./modules/functions/user/signin.mjs";
+import { checkIfsignedIn } from "./modules/functions/user/isSignedIn.mjs";
 
-signoutBtn.addEventListener("click", signOut);
+signForm.addEventListener("submit", signin);
+checkIfsignedIn();
