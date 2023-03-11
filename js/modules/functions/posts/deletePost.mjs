@@ -6,9 +6,24 @@ import {
 } from "../../variables/variables.mjs";
 
 // delete
+
+/**
+
+    Deletes the post with the specified ID.
+    @param {Event} e - The event object triggered by the button click.
+    @returns {Promise} A Promise that resolves with the JSON response from the server if the post was deleted successfully. Otherwise, it rejects with an error message.
+    */
+
 export function deletePost(e) {
   // dont move from page
   e.preventDefault();
+
+  /**
+
+    Sends a DELETE request to the specified URL.
+    @param {string} url - The URL to send the request to.
+    @returns {Promise} A Promise that resolves with the JSON response from the server if the request was successful. Otherwise, it rejects with an error message.
+    */
 
   async function deleteP(url) {
     try {
@@ -38,6 +53,7 @@ export function deletePost(e) {
       }, 5000);
     }
   }
+  // Send a DELETE request to delete the specified post.
   deleteP(updateAndDeleteURL);
 }
 
