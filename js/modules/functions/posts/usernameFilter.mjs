@@ -6,7 +6,7 @@ import {
   userName,
 } from "../../variables/variables.mjs";
 
-export async function fetchPosts(url) {
+export async function fetchMyposts(url) {
   try {
     const getData = {
       method: "GET",
@@ -18,12 +18,13 @@ export async function fetchPosts(url) {
     const response = await fetch(url, getData);
     console.log(response);
     const json = await response.json();
-    const postArray = json.slice().sort((a, b) => b.created - a.created);
-    console.log(postArray);
+    const myPostArray = json
+      .slice()
+      .filter((post) => post.author.name === userName);
 
     postsContainer.innerHTML = "";
     //   all post
-    postArray.forEach(function (post) {
+    myPostArray.forEach(function (post) {
       const { id, title, body, author } = post;
       const postDate = post.created.substring(0, 10);
       const postTime = post.created.substring(11, 16);
@@ -47,21 +48,8 @@ export async function fetchPosts(url) {
                 </div>
             </div>
             </a>`;
-      }
-      if (author.name !== userName) {
-        postsContainer.innerHTML += `
-         <a href="update.html?id=${id}">
-         <div class="card mb-3">
-                <div class="card-body">
-               
-                    <h4 class="card-title">${title}</h4>
-                     <div class="updateEdit"> </div>
-                    <p class="card-text">${body}</p>
-                    <p class="card-text"><small class="text-muted created">Created: ${postDate} at ${postTime} by <b>${postAuthor}</b> - post: ${id}</small></p>
-                
-                </div>
-            </div>
-            </a>`;
+      } else {
+        postsContainer.innerHTML += `<h4>Sorry, no posts found :(</h4>`;
       }
     });
 
@@ -71,12 +59,10 @@ export async function fetchPosts(url) {
   }
 }
 
-// fetchPosts(createAndGetURL);
-
-export function getAll(e) {
+export function myOnly(e) {
   e.preventDefault();
   try {
-    fetchPosts(createAndGetURL);
+    fetchMyposts(createAndGetURL);
   } catch (error) {
     console.log(error);
   }

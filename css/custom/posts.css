@@ -41,8 +41,8 @@
 /* Create or update post  */
 
 .newPostCont {
-  background-color: #e6e2ef;
-  border: #bab0cf solid 1px;
+  border-top: #bab0cf solid 2px;
+  border-bottom: #bab0cf solid 2px;
   padding: 2rem;
 }
 

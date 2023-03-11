@@ -46,6 +46,7 @@ export const titleCreate = document.querySelector("#title");
 export const textCreate = document.querySelector(".textCreate");
 export const btns = document.querySelector(".btns");
 export const pageh1 = document.querySelector(".pageh1");
+export const btnAllPosts = document.querySelector(".btnAllPosts");
 
 // create posts
 export const postBtn = document.querySelector(".postBtn");
@@ -60,6 +61,10 @@ export const postsContainer = document.querySelector(".postsContainer");
 export const loader = document.querySelector(".loader");
 export const searchInput = document.querySelector(".searchInput");
 export const searchForm = document.querySelector(".searchForm");
+
+// filter
+export const btnMyPosts = document.querySelector(".btnMyPosts");
+export const myPost = document.querySelector(".myPost");
 
 // Profile
 

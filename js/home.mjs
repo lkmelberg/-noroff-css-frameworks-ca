@@ -7,16 +7,21 @@ import {
   createAndGetURL,
   postForm,
   signoutBtn,
+  btnMyPosts,
+  btnAllPosts,
 } from "./modules/variables/variables.mjs";
 
 // fucntions
 import { success } from "./modules/functions/posts/disableForm.mjs";
-import { fetchPosts } from "./modules/functions/posts/getAllPosts.mjs";
+import { getAll, fetchPosts } from "./modules/functions/posts/getAllPosts.mjs";
 import { createPost } from "./modules/functions/posts/createPosts.mjs";
 import { signOut } from "./modules/functions/user/signout.mjs";
 import { addProfileName } from "./modules/functions/user/userName.mjs";
+import { myOnly } from "./modules/functions/posts/usernameFilter.mjs";
 
 fetchPosts(createAndGetURL);
+btnMyPosts.addEventListener("click", myOnly);
+btnAllPosts.addEventListener("click", getAll);
 
 textCreate.addEventListener("keyup", success);
 titleCreate.addEventListener("keyup", success);
