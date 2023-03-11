@@ -7,6 +7,13 @@ import {
   postForm,
 } from "../../variables/variables.mjs";
 
+/**
+
+    Creates a new post using the provided input values.
+    @param {Event} e - The event object triggered by the submit action.
+    @returns {Promise} A Promise that resolves with the JSON response from the server if the post was created successfully. Otherwise, it rejects with an error message.
+    */
+
 export function createPost(e) {
   // dont move from page
   e.preventDefault();
@@ -15,9 +22,14 @@ export function createPost(e) {
   const postContent = {
     title: titleCreate.value, // Required
     body: textCreate.value, // Optional
-    // tags: ["string"], // Optional
-    // media: "https://url.com/image.jpg", // Optional
   };
+
+  /**
+    Sends a POST request to the specified URL with the provided data.
+    @param {string} url - The URL to send the request to.
+    @param {object} data - The data to include in the request body.
+    @returns {Promise} A Promise that resolves with the JSON response from the server if the request was successful. Otherwise, it rejects with an error message.
+    */
 
   async function create(url, data) {
     try {
@@ -51,7 +63,7 @@ export function createPost(e) {
     }
   }
   console.log(postContent);
-
+  // Send a POST request to create a new post.
   create(createAndGetURL, postContent);
 }
 
