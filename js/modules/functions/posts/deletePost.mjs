@@ -3,8 +3,7 @@ import {
   token,
   displayMSG,
   updateForm,
-  deleteBtn,
-} from "../variables/variables.mjs";
+} from "../../variables/variables.mjs";
 
 // delete
 export function deletePost(e) {
@@ -28,7 +27,7 @@ export function deletePost(e) {
       updateForm.reset();
       setTimeout(function () {
         window.location.href = `home.html`;
-      }, 5000);
+      }, 4000);
       return json;
     } catch (error) {
       console.log(error);

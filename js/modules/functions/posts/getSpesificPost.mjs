@@ -8,7 +8,7 @@ import {
   currentID,
   addPostId,
   btns,
-} from "../variables/variables.mjs";
+} from "../../variables/variables.mjs";
 
 export async function fetchPostInfo(url) {
   try {

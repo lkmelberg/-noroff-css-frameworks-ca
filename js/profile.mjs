@@ -1,5 +1,3 @@
-// home
-
 // variables
 import {
   titleCreate,

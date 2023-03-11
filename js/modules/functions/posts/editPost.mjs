@@ -5,7 +5,7 @@ import {
   updateForm,
   titleCreate,
   textCreate,
-} from "../variables/variables.mjs";
+} from "../../variables/variables.mjs";
 
 export function updatePost(e) {
   // dont move from page

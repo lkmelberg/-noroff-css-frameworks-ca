@@ -16,20 +16,19 @@ export const token = localStorage.getItem("accessToken");
 export const userName = localStorage.getItem("userName");
 export const displayMSG = document.querySelector(".displayMSG");
 
-// Search
-export const postsContainer = document.querySelector(".postsContainer");
-export const loader = document.querySelector(".loader");
-export const searchInput = document.querySelector(".searchInput");
-export const searchForm = document.querySelector(".searchForm");
+// Register
+export const regForm = document.querySelector(".regForm");
+export const nameReg = document.querySelector("#nameReg");
+export const emailReg = document.querySelector("#emailReg");
+export const passReg = document.querySelector("#passReg");
 
 // Sign in
 export const emailSign = document.querySelector("#emailSign");
 export const passSign = document.querySelector("#passSign");
 export const signForm = document.querySelector(".signForm");
 
-// update and edit - post spesific
-export const currentID = document.querySelector(".currentID");
-export const addPostId = document.querySelector(".addPostId");
+// signout
+export const signoutBtn = document.querySelector(".signout");
 
 // get posts
 export const updateContainer = document.querySelector(".updateContainer");
@@ -46,8 +45,12 @@ export const pageh1 = document.querySelector(".pageh1");
 export const postBtn = document.querySelector(".postBtn");
 export const addContent = document.querySelector(".addContent");
 
-// Register
-export const regForm = document.querySelector(".regForm");
-export const nameReg = document.querySelector("#nameReg");
-export const emailReg = document.querySelector("#emailReg");
-export const passReg = document.querySelector("#passReg");
+// update and edit - post spesific
+export const currentID = document.querySelector(".currentID");
+export const addPostId = document.querySelector(".addPostId");
+
+// Search
+export const postsContainer = document.querySelector(".postsContainer");
+export const loader = document.querySelector(".loader");
+export const searchInput = document.querySelector(".searchInput");
+export const searchForm = document.querySelector(".searchForm");
