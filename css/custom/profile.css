@@ -22,7 +22,11 @@
   flex-direction: column;
   align-items: center;
 }
-
+.friends {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .friend {
   display: flex;
   flex-wrap: nowrap;
@@ -40,8 +44,8 @@
   flex-grow: 2;
 }
 
-@media (max-width: 992px) {
-  .post-friends {
-    flex-wrap: wrap;
+@media (max-width: 800px) {
+  .friends {
+    align-items: center;
   }
 }
