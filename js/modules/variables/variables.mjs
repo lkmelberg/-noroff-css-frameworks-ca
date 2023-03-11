@@ -1,6 +1,14 @@
 // API
 export const API_BASE_URL = "https://nf-api.onrender.com";
+
+// create and get
 export const createAndGetURL = `${API_BASE_URL}/api/v1/social/posts?_author=true`;
+
+// edit and delete
+export const queryString = document.location.search;
+export const params = new URLSearchParams(queryString);
+export const id = params.get("id");
+export const updateAndDeleteURL = `${API_BASE_URL}/api/v1/social/posts/${id}?_author=true`;
 
 // common
 
@@ -23,6 +31,7 @@ export const signForm = document.querySelector(".signForm");
 export const currentID = document.querySelector(".currentID");
 export const addPostId = document.querySelector(".addPostId");
 
+// get posts
 export const updateContainer = document.querySelector(".updateContainer");
 export const updateForm = document.querySelector(".updateForm");
 export const postForm = document.querySelector(".postForm");
@@ -32,6 +41,10 @@ export const titleCreate = document.querySelector("#title");
 export const textCreate = document.querySelector(".textCreate");
 export const btns = document.querySelector(".btns");
 export const pageh1 = document.querySelector(".pageh1");
+
+// create posts
+export const postBtn = document.querySelector(".postBtn");
+export const addContent = document.querySelector(".addContent");
 
 // Register
 export const regForm = document.querySelector(".regForm");

@@ -36,10 +36,7 @@
                             </li>
 
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+
                     </div>
                 </div>
 
@@ -54,13 +51,13 @@
                 <h1 class="addPostId">Edit post: </h1>
                 <form class="form-post updateForm">
                     <div class="mb-4">
-                        <label for="message-text" class="col-form-label">Post Title: <input name="title"
-                                onkeyup="success()" id="title" class="title form-control" /></label>
+                        <label for="message-text" class="col-form-label">Post Title: <input name="title" id="title"
+                                class="title titleCreate form-control" /></label>
 
                     </div>
                     <div class="mb-4">
                         <label for="message-text" class="col-form-label">What would you like to say?</label>
-                        <textarea class="form-control textCreate" onkeyup="success()" id="message-text"></textarea>
+                        <textarea class="form-control textCreate" id="message-text"></textarea>
                     </div>
                     <div class="d-flex justify-content-between btns">
                         <button class="w-25 btn btn-sm btn-primary deleteBtn" type="delete">Delete Post</button>
@@ -98,10 +95,7 @@
                         </svg></a></li>
             </ul>
         </footer>
-        <!-- <script src="js/script.js"></script>
-
-        <script src="js/home.js"></script> -->
-        <script src="js/update.js"></script>
+        <script src="js/update.mjs" type="module"></script>
         <script src="js/user/signout.js"></script>
 
     </body>

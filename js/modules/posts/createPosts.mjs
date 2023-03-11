@@ -1,37 +1,10 @@
-// import { createAndGetURL } from "./modules/urls";
-// import { updateAndDeleteURL } from "./modules/urls";
-
-const API_BASE_URL = "https://nf-api.onrender.com";
-
-// Get all entries & Create entry
-// POST / api / v1 / social / posts;
-export const createAndGetURL = `${API_BASE_URL}/api/v1/social/posts?_author=true`;
-
-const displayMSG = document.querySelector(".displayMSG");
-
-// get all posts
-
-const token = localStorage.getItem("accessToken");
-const userName = localStorage.getItem("userName");
-
-// create post
-const postBtn = document.querySelector(".postBtn");
-const postForm = document.querySelector(".postForm");
-const titleCreate = document.querySelector("#title");
-const textCreate = document.querySelector(".textCreate");
-const addContent = document.querySelector(".addContent");
-
-export function success() {
-  if (textCreate.value === "" || titleCreate.value === "") {
-    postBtn.disabled = true;
-    addContent.innerHTML = `<small>Title and content required</small>`;
-  } else {
-    postBtn.disabled = false;
-    addContent.innerHTML = ``;
-  }
-}
-
-success();
+import {
+  createAndGetURL,
+  titleCreate,
+  textCreate,
+  displayMSG,
+  postForm,
+} from "../variables/variables.mjs";
 
 export function createPost(e) {
   // dont move from page
@@ -81,4 +54,4 @@ export function createPost(e) {
   create(createAndGetURL, postContent);
 }
 
-postForm.addEventListener("submit", createPost);
+// postForm.addEventListener("submit", createPost);

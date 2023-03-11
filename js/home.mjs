@@ -1,15 +1,20 @@
 // home
 
 // variables
-import { createAndGetURL, postForm } from "./modules/variables/variables.mjs";
+import {
+  textCreate,
+  createAndGetURL,
+  postForm,
+} from "./modules/variables/variables.mjs";
 
 // fucntions
-import { fetchPosts } from "./modules/posts/allPosts.mjs";
-import { success } from "./createPosts.mjs";
-import { createPost } from "./createPosts.mjs";
+import { success } from "./modules/posts/disableForm.mjs";
+import { fetchPosts } from "./modules/posts/getAllPosts.mjs";
+import { createPost } from "./modules/posts/createPosts.mjs";
 
 fetchPosts(createAndGetURL);
 
-success();
+textCreate.addEventListener("keyup", success);
+titleCreate.addEventListener("keyup", success);
 
 postForm.addEventListener("submit", createPost);

@@ -72,4 +72,4 @@ export async function fetchPosts(url) {
   }
 }
 
-fetchPosts(createAndGetURL);
+// fetchPosts(createAndGetURL);
