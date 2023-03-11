@@ -5,7 +5,7 @@ const API_BASE_URL = "https://nf-api.onrender.com";
 
 // Get all entries & Create entry
 // POST / api / v1 / social / posts;
-const createAndGetURL = `${API_BASE_URL}/api/v1/social/posts?_author=true`;
+export const createAndGetURL = `${API_BASE_URL}/api/v1/social/posts?_author=true`;
 
 const displayMSG = document.querySelector(".displayMSG");
 
@@ -21,7 +21,7 @@ const titleCreate = document.querySelector("#title");
 const textCreate = document.querySelector(".textCreate");
 const addContent = document.querySelector(".addContent");
 
-function success() {
+export function success() {
   if (textCreate.value === "" || titleCreate.value === "") {
     postBtn.disabled = true;
     addContent.innerHTML = `<small>Title and content required</small>`;
@@ -33,7 +33,7 @@ function success() {
 
 success();
 
-function createPost(e) {
+export function createPost(e) {
   // dont move from page
   e.preventDefault();
 

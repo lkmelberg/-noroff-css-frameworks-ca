@@ -1,3 +1,7 @@
+// API
+export const API_BASE_URL = "https://nf-api.onrender.com";
+export const createAndGetURL = `${API_BASE_URL}/api/v1/social/posts?_author=true`;
+
 // common
 
 export const token = localStorage.getItem("accessToken");
@@ -34,6 +38,3 @@ export const regForm = document.querySelector(".regForm");
 export const nameReg = document.querySelector("#nameReg");
 export const emailReg = document.querySelector("#emailReg");
 export const passReg = document.querySelector("#passReg");
-
-export const API_BASE_URL = "https://nf-api.onrender.com";
-export const createAndGetURL = `${API_BASE_URL}/api/v1/social/posts?_author=true`;
