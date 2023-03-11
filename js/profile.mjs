@@ -12,6 +12,7 @@ import { success } from "./modules/functions/posts/disableForm.mjs";
 import { fetchPosts } from "./modules/functions/posts/getAllPosts.mjs";
 import { createPost } from "./modules/functions/posts/createPosts.mjs";
 import { signOut } from "./modules/functions/user/signout.mjs";
+import { addProfileName } from "./modules/functions/user/userName.mjs";
 
 fetchPosts(createAndGetURL);
 
@@ -21,3 +22,5 @@ titleCreate.addEventListener("keyup", success);
 postForm.addEventListener("submit", createPost);
 
 signoutBtn.addEventListener("click", signOut);
+
+addProfileName();

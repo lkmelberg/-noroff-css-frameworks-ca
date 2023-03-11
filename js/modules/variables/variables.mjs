@@ -60,3 +60,7 @@ export const postsContainer = document.querySelector(".postsContainer");
 export const loader = document.querySelector(".loader");
 export const searchInput = document.querySelector(".searchInput");
 export const searchForm = document.querySelector(".searchForm");
+
+// Profile
+
+export const profileName = document.querySelector(".profileName");
