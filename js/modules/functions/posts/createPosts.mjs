@@ -50,7 +50,7 @@ export function createPost(e) {
       setTimeout(function () {
         displayMSG.innerHTML = "";
         location.reload();
-      }, 4000);
+      }, 3000);
       return json;
     } catch (error) {
       console.log(error);
