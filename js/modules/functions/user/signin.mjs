@@ -45,6 +45,8 @@ export function signin(e) {
         }, 2500);
       } else if (accessToken === undefined) {
         displayMSG.innerHTML = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
+      } else {
+        displayMSG.innerHTML = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
       }
       return json;
     } catch (error) {
