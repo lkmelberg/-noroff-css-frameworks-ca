@@ -17,7 +17,7 @@
         <Header>
             <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-black">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="home.html"><img src="images/logo/Vectorts_logo_light.png" alt=""></a>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo/Vectorts_logo_light.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="profile.html">Profile</a>
@@ -37,56 +37,42 @@
 
                         </ul>
 
-
-
                     </div>
                 </div>
-                <div class="SeachBtnContainer">
 
-                    <a href="search.html"> <button class="btn searchBtn btn-outline-success" type="submit">Search for
-                            posts</button></a>
-                </div>
             </nav>
-
         </Header>
+
         <main class="col-12 d-flex justify-content-center align-items-center flex-column">
+            <div class="breadcrumb"><a href="home.html">Home</a> / <a class="currentID" href="#"></a></div>
+
             <div class="displayMSG"></div>
-            <h1>Welcome <div class="profileName"></div>
-            </h1>
-            <div class="container newPostCont new-post col-6 col-lg-5">
-                <h2>Create new post</h2>
-                <form class="form-post postForm">
+            <div class="loader">
+                <p>Loading post, please wait...</p>
+            </div>
+            <div class="container updateContainer new-post col-6 col-lg-5">
+                <h1 class="addPostId">Edit post: </h1>
+                <form class="form-post updateForm">
                     <div class="mb-4">
                         <label for="message-text" class="col-form-label">Post Title: <input name="title" id="title"
-                                class="title form-control" /></label>
+                                class="title titleCreate form-control" /></label>
 
                     </div>
                     <div class="mb-4">
                         <label for="message-text" class="col-form-label">What would you like to say?</label>
                         <textarea class="form-control textCreate" id="message-text"></textarea>
                     </div>
-                    <div class="d-flex justify-content-end">
-                        <div class="addContent"><small>Title and content requireds</small></div>
-                        <button disabled="true" class="w-25 btn btn-sm btn-primary postBtn" type="submit">Create
-                            Post</button>
+                    <div class="d-flex justify-content-between btns">
+                        <button class="w-25 btn btn-sm btn-primary deleteBtn" type="delete">Delete Post</button>
+                        <button class="w-25 btn btn-sm btn-primary updateBtn" type="submit">Update Post</button>
                     </div>
+
                 </form>
             </div>
-            <div class="container list-post col-8 col-lg-5 justify-content-center align-items-center">
-                <h3>Post Feed:</h3>
 
-                <div class="filterBtns">
-                    <button class="btn btnMyPosts">View My Posts</button>
-                    <button class="btn btnAllPosts">All Posts</button>
-                </div>
-            </div>
 
-            <div class="loader">
-                <p>Loading posts, please wait...</p>
-            </div>
-            <div class="postsContainer">
 
-            </div>
+
         </main>
 
         <footer id="footer"
@@ -112,9 +98,8 @@
                         </svg></a></li>
             </ul>
         </footer>
+        <script src="js/update.mjs" type="module"></script>
 
-
-        <script src="js/home.mjs" type="module"></script>
 
     </body>
 

@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/lkmelberg/-noroff-css-frameworks-ca#readme",
   "dependencies": {
-    "bootstrap": "^5.2.0"
+    "bootstrap": "^5.2.0",
+    "node.js": "^0.0.1-security"
   },
   "devDependencies": {
     "sass": "^1.58.0"

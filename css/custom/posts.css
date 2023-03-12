@@ -1,0 +1,115 @@
+.new-post,
+.list-post,
+.friends {
+  /* background-color: #6118fb; */
+  border-radius: 5px;
+  margin: 3rem;
+
+  text-align: center;
+}
+
+.card {
+  margin-top: 1rem;
+  width: 40rem;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* filter  */
+
+.filterContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 0.1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.btnFilter {
+  border-radius: 5px;
+}
+
+.filterActive {
+  background-color: #6118fb;
+}
+
+/* Create or update post  */
+
+.newPostCont {
+  border-top: #bab0cf solid 2px;
+  border-bottom: #bab0cf solid 2px;
+  padding: 2rem;
+}
+
+.addContent {
+  display: flex;
+  margin-right: 0.5rem;
+  align-items: flex-end;
+}
+
+.postBtn:disabled,
+.updateBtn:disabled {
+  color: #fff;
+  background-color: #d4bfff;
+  border-color: #d4bfff;
+}
+
+.textCreate {
+  height: 8rem;
+}
+
+.topCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.updateForm {
+  width: 35rem;
+}
+.updateContainer,
+.postsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-body {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+a h1,
+h4,
+p {
+  color: #000;
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    width: 30rem;
+  }
+  .postBtn {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .card {
+    width: 15rem;
+  }
+}

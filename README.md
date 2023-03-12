@@ -1,47 +1,45 @@
-# -noroff-css-frameworks-ca
+# Noroff js2 CA
+
+link to trelloboard: https://trello.com/b/2i7uqfmk/melbergjs2ca
 
 Goal
 
-To apply knowledge of Bootstrap and SASS to build a responsive front end for a social media application.
+To apply knowledge of JavaScript techniques to implement the front-end functionality for a social media application.
+API
+
+The API you are using for this project can be found under Social EndPoints in the Noroff API documentation.
 Brief
 
-You are tasked with creating 3 pages in HTML using Bootstrap and SASS:
+You have been tasked with producing a new JavaScript front-end client for an existing social media platform. The client application must be attractive and responsive, but you have an otherwise blank slate in terms of theme design language.
 
-    Homepage
-    Profile page
-    Login page
+Using the provided API and API documentation, create a functioning user interface that allows for viewing, posting, editing and deleting social media content.
 
-The homepage should have a feed of posts from the user’s contacts, a search bar, and a form to create a new post.
+Social API routes require authorisation via JWT (JSON Web Tokens). You will need to register an account and login to access your token.
 
-The profile page should have a profile image, details about the user, a list of the user’s contacts, their posts and a form to post to their wall.
+To complete the required features, you will also need to make use of GET, POST, PUT, and DELETE HTTP methods.
 
-The login page should have a form to login to the application. Ensure to include HTML form validation and use /profile as the action attribute.
+Using localStorage is highly recommended, especially for storing JWT tokens.
 
-You will only be working on the visuals for this project at this stage; forms do not need to submit data, for example.
+A finished project fulfils the requirements below with an easy to use and error-free user interface.
+Required features
 
-Submission for this project will follow the pattern used in professional development. You are required to seek feedback from your peers as well as the teachers to complete this assignment.
-Process
+The following user stories are required for a passing submission:
 
-    Create a design or wireframe for each page
-    Create a new public repository on GitHub
-    Create a new project folder for this repository
-    Create a new git branch for this project
-    Create a package.json file
-    Install Bootstrap, SASS and Live Server
-    Configure NPM scripts in package.json
-    Implement your design using Bootstrap and SASS overrides
-    Create a Pull Request to merge your changes to the main branch
-    Share this Pull Request and request peer review
-    Discuss and implement the feedback gathered from peer review
-    Share this Pull Request with a teacher for their approval
-    Complete the approved Pull Request, or implement the required changes
+    User with @noroff.no or @stud.noroff.no email can register profile
+    Registered user can login
+    User can view a post content feed
+    User can filter the post content feed
+    User can search the post content feed
+    User can view a post content item by ID
+    User can create a post content item
+    User can update a post content item
+    User can delete a post content item
 
-Delivery
+Additional features
 
-For peer review, please submit a link to your repository to the Moodle forum. You should review 2 of your peers’ submissions.
+The following user stories are optional:
 
-Please submit your public GitHub repository URL and any supplementary files, such as wireframes. Your repo should have an active PR that the teachers will review.
-
-Design files will not be included in your grade but will help to provide additional context to the marker.
-
-    Please make sure to exclude node_modules by using a .gitignore file.
+    User can create a comment on a post
+    User can edit profile media
+    User can follow/unfollow a profile
+    User can react to a post content item

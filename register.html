@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TravelShare - Login</title>
+        <title>TravelShare - Register</title>
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap_styles.css">
         <link rel="stylesheet" href="css/custom/styles.css">
@@ -17,7 +17,7 @@
         <Header>
             <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-black">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src="images/logo/Vectorts_logo_light.png" alt=""></a>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo/Vectorts_logo_light.png" alt=""></a>
 
                 </div>
             </nav>
@@ -26,26 +26,30 @@
 
         <main class="text-center form-signin w-100 m-auto">
             <div class="displayMSG"></div>
-            <h1>Welcome To</h1>
-
-            <form action="/index.html" class="must-validate signForm">
+            <form action="/index.html" class="must-validate regForm">
                 <img class="mb-5" src="images/logo/Vectorts_logo_dark.png" alt="" width="auto" height="60">
-                <h1 class="h3 mb-3 fw-normal">Sign in to Account</h1>
-
+                <h1 class="h3 mb-3 fw-normal">Register Account</h1>
 
                 <div class="form-floating">
-                    <input type="email" class="form-control emailReg" id="emailSign" placeholder="name@example.com">
-                    <label for="emailSign">Email address</label>
+                    <input type="name" class="form-control nameReg" id="nameReg" required title="please enter your name"
+                        placeholder="Jane Smith">
+                    <label for="nameReg">Name</label>
                 </div>
                 <div class="form-floating">
-                    <input type="password" class="form-control passReg" id="passSign" placeholder="Password">
-                    <label for="passSign">Password</label>
+                    <input type="email" class="form-control emailReg" id="emailReg"
+                        title="please enter your noroff email, ex: name@noroff.no" required
+                        placeholder="name@noroff.no">
+                    <label for="emailReg">Noroff Email Address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control passReg" id="passReg" required placeholder="Password">
+                    <label for="passReg">Password</label>
                 </div>
 
 
-                <button class="w-100 btn btn-lg btn-primary btnSign" type="submit">Sign In</button>
+                <button class="w-100 btn btn-lg btn-primary btnReg" type="submit">Register</button>
                 <div>or</div>
-                <div class="w-100 btn btn-primary"><a href="register.html">Register</a></div>
+                <div class="w-100 btn btn-primary"><a href="index.html">Back to sign in</a></div>
                 <p class="mt-5 mb-3 text-muted">&copy;2023</p>
             </form>
 
@@ -74,9 +78,7 @@
                         </svg></a></li>
             </ul>
         </footer>
-
-        <script type="module" src="js/index.mjs" type="module"></script>
-
+        <script src="js/register.mjs" type="module"></script>
     </body>
 
 </html>
