@@ -40,7 +40,7 @@ export function deletePost(e) {
       updateForm.reset();
       setTimeout(function () {
         window.location.href = `home.html`;
-      }, 4000);
+      }, 2500);
       return json;
     } catch (error) {
       console.log(error);
