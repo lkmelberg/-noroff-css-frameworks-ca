@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass scss:css",
-    "watch": "sass --watch scss:css & live-server"
+    "watch": "sass --watch scss:css & live-server",
+    "docs": "jsdoc -c ./conf.json -r",
+    "generate-docs": "jsdoc -c /path/to/my/conf.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "node.js": "^0.0.1-security"
   },
   "devDependencies": {
+    "jsdoc": "^4.0.2",
     "sass": "^1.58.0"
   }
 }
